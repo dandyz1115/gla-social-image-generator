@@ -58,7 +58,8 @@ let ready = false;
 let exporting = false;
 let frame;
 
-const regionFields = regions.map(([name, value, color]) => {
+const regionFields = regions.map(([, value, color], index) => {
+  const name = editions[edition].regionNames[index];
   const label = document.createElement("label");
   label.className = "region";
   const swatch = document.createElement("span");
@@ -77,7 +78,8 @@ const regionFields = regions.map(([name, value, color]) => {
   return { input, caption };
 });
 
-const metricFields = metrics.map(([name, value]) => {
+const metricFields = metrics.map(([, value], index) => {
+  const name = editions[edition].metricNames[index];
   const label = document.createElement("label");
   label.className = "metric";
   const input = document.createElement("input");
