@@ -16,7 +16,7 @@ const metrics = [
   ["Countries", "170+", 172],
   ["Global Members", "7,500+", 226],
   ["International Ports", "706+", 247],
-  ["Successful Conferences", "14", 334],
+  ["Successful Conferences", "15", 334],
 ];
 
 const editions = {
