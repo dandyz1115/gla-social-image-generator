@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="在线生成并下载 GLA 会员分布社媒图。">
+  <title>GLA 社媒图生成器</title>
+  <link rel="icon" href="./assets/gla-blue.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <img src="./assets/gla-blue.svg" width="104" height="37" alt="GLA Global Logistics Alliance">
+      <span>品牌工具 / 社媒图</span>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>会员分布社媒图</h1>
+      <p>修改地区占比和底部指标，实时生成可下载的社媒图片。</p>
+    </div>
+    <div class="workspace">
+      <section class="preview" aria-labelledby="preview-heading">
+        <header class="panel-head">
+          <h2 id="preview-heading">实时预览</h2>
+          <span>1:1 正方形</span>
+        </header>
+        <div class="stage">
+          <canvas id="poster" width="1080" height="1080" role="img" aria-label="GLA 会员分布海报，具体数值见数据设置。">GLA 会员分布海报</canvas>
+        </div>
+        <div class="export">
+          <label>导出尺寸
+            <select id="size">
+              <option value="2160">2160 × 2160 px</option>
+              <option value="1080">1080 × 1080 px</option>
+            </select>
+          </label>
+          <button class="primary" id="download" type="button" disabled>↓ 下载 PNG</button>
+          <p id="export-status" role="status">正在加载海报素材…</p>
+        </div>
+      </section>
+      <section class="editor" aria-labelledby="editor-heading">
+        <header class="panel-head">
+          <h2 id="editor-heading">数据设置</h2>
+          <button class="quiet" type="reset" form="settings">恢复默认</button>
+        </header>
+        <form id="settings">
+          <label class="title-field">海报标题<input id="headline" maxlength="55" value="GLA MEMBERS DISTRIBUTION"></label>
+          <fieldset>
+            <legend>地区占比</legend>
+            <div id="regions" class="regions"></div>
+            <p class="total"><span>合计</span><output id="total" aria-label="占比合计">100.00%</output></p>
+            <p id="validation" class="validation" role="status"></p>
+          </fieldset>
+          <fieldset>
+            <legend>底部指标</legend>
+            <div id="metrics" class="metrics"></div>
+          </fieldset>
+        </form>
+      </section>
+    </div>
+    <noscript>此工具需要 JavaScript 来生成 PNG。</noscript>
+    <footer>字体使用 <a href="./assets/HarmonyOS-LICENSE.txt">HarmonyOS Sans SC</a></footer>
+  </main>
+</body>
+</html>
