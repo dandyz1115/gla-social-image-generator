@@ -27,9 +27,6 @@
           <h2 id="preview-heading">实时预览</h2>
           <span>1:1 正方形</span>
         </header>
-        <div class="stage">
-          <canvas id="poster" width="1080" height="1080" role="img" aria-label="GLA 会员分布海报，具体数值见数据设置。">GLA 会员分布海报</canvas>
-        </div>
         <div class="export">
           <label>导出尺寸
             <select id="size">
@@ -39,6 +36,9 @@
           </label>
           <button class="primary" id="download" type="button" disabled>↓ 下载 PNG</button>
           <p id="export-status" role="status">正在加载海报素材…</p>
+        </div>
+        <div class="stage">
+          <canvas id="poster" width="1080" height="1080" role="img" aria-label="GLA 会员分布海报，具体数值见数据设置。">GLA 会员分布海报</canvas>
         </div>
       </section>
       <section class="editor" aria-labelledby="editor-heading">
