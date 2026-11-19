@@ -1,0 +1,51 @@
+.booth-library { padding-bottom: 48px; }
+.filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 2fr) repeat(3, minmax(120px, 1fr)) auto;
+  align-items: end;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+.filters label { display: grid; gap: 4px; color: var(--muted); font-size: 13px; }
+.filters button { min-height: 36px; }
+.result-status { padding: 15px 0; color: var(--muted); }
+.booth-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.booth-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+.booth-image { border: 0; padding: 0; background: #e7eef5; width: 100%; aspect-ratio: 3 / 2; cursor: zoom-in; }
+.booth-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.booth-content { display: grid; align-content: start; gap: 6px; padding: 12px 14px 14px; flex: 1; }
+.booth-content h2 { font-size: 16px; overflow-wrap: anywhere; }
+.booth-meta, .booth-variant, #preview-meta { font-size: 13px; color: var(--muted); }
+.download { display: inline-block; color: white; background: var(--blue); text-decoration: none; border-radius: 5px; padding: 6px 11px; font-size: 13px; flex: none; }
+.download:hover { background: #073d7b; }
+.booth-content .download { justify-self: start; margin-top: 5px; }
+.more { display: block; margin: 20px auto 0; min-height: 38px; }
+[hidden] { display: none !important; }
+#preview { border: 1px solid var(--line); border-radius: 8px; padding: 0; width: min(1100px, calc(100% - 24px)); max-height: 94dvh; color: var(--ink); }
+#preview::backdrop { background: #091b31bf; }
+#preview-image { display: block; width: 100%; max-height: 72dvh; object-fit: contain; background: #e7eef5; }
+.preview-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; }
+.preview-bar h2 { overflow-wrap: anywhere; }
+.preview-bar button { flex: none; }
+@media (max-width: 900px) {
+  .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .filters label:first-child { grid-column: 1 / -1; }
+  .booth-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 540px) {
+  .masthead-inner { gap: 8px; }
+  .masthead-inner img { width: 82px; flex: none; }
+  .tool-nav a { padding-inline: 6px; font-size: 12px; }
+  .booth-grid { grid-template-columns: 1fr; }
+}
