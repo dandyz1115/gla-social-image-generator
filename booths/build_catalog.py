@@ -58,6 +58,8 @@ def describe(path, root):
     if not match:
         raise ValueError(f"Missing booth size: {path.relative_to(root)}")
     company = name[:match.start()].strip(" -")
+    if name == "6x6标展":
+        company = "GLA"
     width, depth = sorted((int(match[1]), int(match[2])), reverse=True)
     type_name = "特展" if "特展" in name else "标展"
     variant = name[match.end():].strip(" -")

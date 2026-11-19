@@ -5,6 +5,7 @@
 网页以 GitHub Pages 从 `main` 分支根目录发布。可在本目录运行 `python3 -m http.server 8080`，然后打开 `http://localhost:8080/` 进行本地预览。数据和 PNG 在浏览器内处理。刷新页面会恢复模板数据。
 
 字体使用 HarmonyOS Sans SC，许可见 [HarmonyOS-LICENSE.txt](assets/HarmonyOS-LICENSE.txt)。
+
 ## 展位效果图图库
 
 `booths/` 提供搜索、筛选、大图预览和原图下载。网站从 GitHub Pages 的 `main` 根目录发布。
