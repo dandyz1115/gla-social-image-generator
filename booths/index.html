@@ -7,8 +7,8 @@
   <title>展位效果图 · GLA 业务工具</title>
   <link rel="icon" href="../assets/gla-blue.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="./gallery.css">
-  <script src="./gallery.js" defer></script>
+  <link rel="stylesheet" href="./gallery.css?v=2">
+  <script src="./gallery.js?v=2" defer></script>
 </head>
 <body>
   <header class="masthead">
@@ -33,9 +33,9 @@
       <label>类型<select id="type"><option value="">全部</option></select></label>
       <button class="quiet" id="clear" type="button">清除筛选</button>
     </section>
-    <p id="status" role="status" class="result-status">正在加载效果图…</p>
+    <p id="status" role="status" class="result-status" tabindex="-1">正在加载效果图…</p>
     <div id="cards" class="booth-grid"></div>
-    <button id="more" class="quiet more" type="button" hidden>加载更多</button>
+    <nav id="pagination" class="pagination" aria-label="展位效果图分页" hidden></nav>
     <noscript>请启用 JavaScript 使用图库的搜索和下载功能。</noscript>
   </main>
   <dialog id="preview" aria-labelledby="preview-title">

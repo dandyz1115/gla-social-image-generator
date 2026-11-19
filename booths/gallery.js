@@ -5,13 +5,12 @@ const fields = ["owner", "size", "type"];
 const filters = Object.fromEntries(fields.map((field) => [field, document.getElementById(field)]));
 const cards = document.querySelector("#cards");
 const status = document.querySelector("#status");
-const more = document.querySelector("#more");
+const pagination = document.querySelector("#pagination");
 const preview = document.querySelector("#preview");
 const previewImage = document.querySelector("#preview-image");
-const pageSize = 24;
+const pageSize = 30;
 let images = [];
 let matches = [];
-let shown = 0;
 
 function normalized(value) {
   return value.normalize("NFKC").toLowerCase().replace(/[×＊*]/g, "x").trim();
@@ -35,9 +34,11 @@ function openPreview(entry) {
   preview.showModal();
 }
 
-function addCards() {
+function renderPage(page) {
+  const start = (page - 1) * pageSize;
+  const end = Math.min(start + pageSize, matches.length);
   const fragment = document.createDocumentFragment();
-  for (const entry of matches.slice(shown, shown + pageSize)) {
+  for (const entry of matches.slice(start, end)) {
     const card = document.createElement("article");
     card.className = "booth-card";
     const button = document.createElement("button");
@@ -75,10 +76,41 @@ function addCards() {
     card.append(button, content);
     fragment.append(card);
   }
-  cards.append(fragment);
-  shown = Math.min(shown + pageSize, matches.length);
-  more.hidden = shown >= matches.length;
-  status.textContent = matches.length ? `共 ${matches.length} 张，已显示 ${shown} 张` : "没有找到符合条件的效果图。";
+  cards.replaceChildren(fragment);
+  const pageCount = Math.ceil(matches.length / pageSize);
+  status.textContent = matches.length
+    ? `共 ${matches.length} 张 · 第 ${page} / ${pageCount} 页 · 显示第 ${start + 1}–${end} 张`
+    : "没有找到符合条件的效果图。";
+  renderPagination(page, pageCount);
+}
+
+function renderPagination(page, pageCount) {
+  pagination.replaceChildren();
+  pagination.hidden = pageCount <= 1;
+  if (pagination.hidden) return;
+
+  function addButton(label, destination, disabled = false) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "quiet";
+    button.textContent = label;
+    button.disabled = disabled;
+    button.addEventListener("click", () => {
+      renderPage(destination);
+      status.focus({ preventScroll: true });
+      status.scrollIntoView({ block: "start" });
+    });
+    pagination.append(button);
+    return button;
+  }
+
+  addButton("上一页", page - 1, page === 1);
+  for (let number = 1; number <= pageCount; number++) {
+    const button = addButton(String(number), number, number === page);
+    button.setAttribute("aria-label", `第 ${number} 页`);
+    if (number === page) button.setAttribute("aria-current", "page");
+  }
+  addButton("下一页", page + 1, page === pageCount);
 }
 
 function applyFilters() {
@@ -87,9 +119,7 @@ function applyFilters() {
     fields.every((field) => !filters[field].value || entry[field] === filters[field].value) &&
     terms.every((term) => entry.searchText.includes(term))
   );
-  shown = 0;
-  cards.replaceChildren();
-  addCards();
+  renderPage(1);
 }
 
 async function loadImages() {
@@ -120,7 +150,6 @@ async function loadImages() {
   }
 }
 
-more.addEventListener("click", addCards);
 document.querySelector("#close-preview").addEventListener("click", () => preview.close());
 preview.addEventListener("close", () => previewImage.removeAttribute("src"));
 loadImages();
