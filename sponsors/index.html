@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="浏览订书机、会议台卡、桌牌和参会证赞助效果图，下载高清原图。">
+  <title>赞助产品效果图 · GLA 业务工具</title>
+  <link rel="icon" href="../assets/gla-blue.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../booths/gallery.css?v=3">
+  <script src="../booths/gallery.js?v=3" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <img src="../assets/gla-blue.svg" width="104" height="37" alt="GLA Global Logistics Alliance">
+      <nav class="tool-nav" aria-label="业务工具">
+        <a href="../">社媒图生成</a>
+        <a href="../email.html">邮件素材</a>
+        <a href="../booths/">展位效果图</a>
+        <a href="./" aria-current="page">赞助产品效果图</a>
+      </nav>
+    </div>
+  </header>
+  <main class="booth-library">
+    <header class="intro">
+      <h1>赞助产品效果图</h1>
+      <p>按产品、品牌或归属人查找，预览并下载原图。</p>
+    </header>
+    <section class="filters sponsor-filters" aria-label="搜索与筛选">
+      <label>搜索<input id="search" type="search" placeholder="例如订书机、eMove、Vanessa" autocomplete="off"></label>
+      <label>归属人<select id="owner"><option value="">全部</option></select></label>
+      <label>产品<select id="type"><option value="">全部</option></select></label>
+      <button class="quiet" id="clear" type="button">清除筛选</button>
+    </section>
+    <p id="status" role="status" class="result-status" tabindex="-1">正在加载效果图…</p>
+    <div id="cards" class="booth-grid"></div>
+    <nav id="pagination" class="pagination" aria-label="赞助产品效果图分页" hidden></nav>
+    <noscript>请启用 JavaScript 使用图库的搜索和下载功能。</noscript>
+  </main>
+  <dialog id="preview" aria-labelledby="preview-title">
+    <div class="preview-bar">
+      <h2 id="preview-title"></h2>
+      <button type="button" class="quiet" id="close-preview">关闭预览</button>
+    </div>
+    <img id="preview-image" alt="">
+    <div class="preview-bar">
+      <span id="preview-meta"></span>
+      <a id="preview-download" class="download" download>下载原图</a>
+    </div>
+  </dialog>
+</body>
+</html>

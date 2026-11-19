@@ -1,7 +1,7 @@
 "use strict";
 
 const search = document.querySelector("#search");
-const fields = ["owner", "size", "type"];
+const fields = ["owner", "size", "type"].filter((field) => document.getElementById(field));
 const filters = Object.fromEntries(fields.map((field) => [field, document.getElementById(field)]));
 const cards = document.querySelector("#cards");
 const status = document.querySelector("#status");
@@ -28,7 +28,7 @@ function downloadLink(link, entry) {
 function openPreview(entry) {
   document.querySelector("#preview-title").textContent = entry.company;
   document.querySelector("#preview-meta").textContent = [describe(entry), entry.variant].filter(Boolean).join(" · ");
-  previewImage.alt = entry.company + " 展位效果图";
+  previewImage.alt = entry.company + " 效果图";
   previewImage.src = entry.original;
   downloadLink(document.querySelector("#preview-download"), entry);
   preview.showModal();

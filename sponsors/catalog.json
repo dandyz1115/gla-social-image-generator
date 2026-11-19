@@ -1,0 +1,42 @@
+[
+  {
+    "company": "eMove Global",
+    "owner": "Vanessa",
+    "type": "订书机",
+    "size": "",
+    "variant": "白色迷你款",
+    "filename": "eMove Global-白色迷你订书机-赞助效果图.png",
+    "original": "originals/afb59db79e947d28ffa9.png",
+    "thumbnail": "thumbs/afb59db79e947d28ffa9.webp"
+  },
+  {
+    "company": "GLA 一对一台卡",
+    "owner": "",
+    "type": "台卡",
+    "size": "",
+    "variant": "长桌会谈",
+    "filename": "一对一台卡-长桌面对面-通用版.png",
+    "original": "originals/9dd0ddc3bb56ea255ce6.png",
+    "thumbnail": "thumbs/9dd0ddc3bb56ea255ce6.webp"
+  },
+  {
+    "company": "GLA 一对一桌牌",
+    "owner": "",
+    "type": "桌牌",
+    "size": "",
+    "variant": "赞助位示例",
+    "filename": "一对一桌牌效果图-空白赞助商位.png",
+    "original": "originals/3d2242938c3939396103.png",
+    "thumbnail": "thumbs/3d2242938c3939396103.webp"
+  },
+  {
+    "company": "GLA 参会证",
+    "owner": "",
+    "type": "参会证",
+    "size": "",
+    "variant": "现场佩戴",
+    "filename": "参会证-人物佩戴效果图.png",
+    "original": "originals/9050777777def4545cb7.png",
+    "thumbnail": "thumbs/9050777777def4545cb7.webp"
+  }
+]

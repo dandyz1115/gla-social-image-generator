@@ -18,7 +18,9 @@ EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
 def publishable(path, root):
     relative = path.relative_to(root)
     name = path.stem
-    if path.suffix.lower() not in EXTENSIONS or "预览" in name:
+    if path.suffix.lower() not in EXTENSIONS or any(marker in name for marker in ("预览", "3D渲染", "3D模型")):
+        return False
+    if name in {"6x6标展", "F2 LOGISTICS-6×3m-特展-Option 3-四面门楣空顶-尺寸标注-2K"}:
         return False
     if len(relative.parts) == 1:
         return bool(SIZE.search(name) and ("标展" in name or "特展" in name))
@@ -26,6 +28,8 @@ def publishable(path, root):
         return False
     if relative.parts[0].endswith("-展位效果图"):
         return True
+    if relative.parts[0] == "模板":
+        return name.startswith("GLA-6×3m-特展-Option 3-") and name.endswith("-AI模板-2K")
     return relative.parts[0] == "6x6米展位-3D模型" and name.startswith("GLA-") and "尺寸标注" in name
 
 
@@ -58,8 +62,6 @@ def describe(path, root):
     if not match:
         raise ValueError(f"Missing booth size: {path.relative_to(root)}")
     company = name[:match.start()].strip(" -")
-    if name == "6x6标展":
-        company = "GLA"
     width, depth = sorted((int(match[1]), int(match[2])), reverse=True)
     type_name = "特展" if "特展" in name else "标展"
     variant = name[match.end():].strip(" -")
@@ -70,7 +72,7 @@ def describe(path, root):
     return company, owner, f"{width}×{depth}m", type_name, variant
 
 
-def build(root):
+def build(root, prune=False):
     source = {path for path in root.rglob("*") if path.is_file() and publishable(path, root)}
     (HERE / "originals").mkdir(exist_ok=True)
     (HERE / "thumbs").mkdir(exist_ok=True)
@@ -100,11 +102,18 @@ def build(root):
     for entry in entries:
         del entry["modified"]
     (HERE / "catalog.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if prune:
+        for key, folder in (("original", "originals"), ("thumbnail", "thumbs")):
+            keep = {HERE / entry[key] for entry in entries}
+            for path in (HERE / folder).iterdir():
+                if path.is_file() and path.suffix.lower() in EXTENSIONS and path not in keep:
+                    path.unlink()
     print(f"{len(entries)} booth renders")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path)
+    parser.add_argument("--prune", action="store_true", help="Remove unpublished image copies from the site")
     args = parser.parse_args()
-    build(args.source.resolve(strict=True))
+    build(args.source.resolve(strict=True), args.prune)

@@ -4,10 +4,40 @@
     "owner": "Mia",
     "size": "6×3m",
     "type": "特展",
-    "variant": "Option 3 · 四面门楣空顶",
-    "filename": "F2 LOGISTICS-6×3m-特展-Option 3-四面门楣空顶-尺寸标注-2K.png",
-    "original": "originals/1b0f8970f5bb7fd25073.png",
-    "thumbnail": "thumbs/1b0f8970f5bb7fd25073.webp"
+    "variant": "Option 3 · 俯视 · AI",
+    "filename": "F2 LOGISTICS-6×3m-特展-Option 3-俯视-AI效果图-尺寸标注-2K.png",
+    "original": "originals/43620975bb03153840fb.png",
+    "thumbnail": "thumbs/43620975bb03153840fb.webp"
+  },
+  {
+    "company": "GLA",
+    "owner": "",
+    "size": "6×3m",
+    "type": "特展",
+    "variant": "Option 3 · 俯视 · AI模板",
+    "filename": "GLA-6×3m-特展-Option 3-俯视-AI模板-2K.png",
+    "original": "originals/4771af261e2c138b7cd1.png",
+    "thumbnail": "thumbs/4771af261e2c138b7cd1.webp"
+  },
+  {
+    "company": "GLA",
+    "owner": "",
+    "size": "6×3m",
+    "type": "特展",
+    "variant": "Option 3 · 正常透视 · AI模板",
+    "filename": "GLA-6×3m-特展-Option 3-正常透视-AI模板-2K.png",
+    "original": "originals/6979b2db7dd49a4dc4cd.png",
+    "thumbnail": "thumbs/6979b2db7dd49a4dc4cd.webp"
+  },
+  {
+    "company": "F2 LOGISTICS",
+    "owner": "Mia",
+    "size": "6×3m",
+    "type": "特展",
+    "variant": "Option 3 · 正常透视 · AI",
+    "filename": "F2 LOGISTICS-6×3m-特展-Option 3-正常透视-AI效果图-尺寸标注-2K.png",
+    "original": "originals/07ee66a6cbe37af8fd43.png",
+    "thumbnail": "thumbs/07ee66a6cbe37af8fd43.webp"
   },
   {
     "company": "MYCS",
@@ -1528,15 +1558,5 @@
     "filename": "Cargo Hellas Forwarding-3×3m-标展效果图-2K.png",
     "original": "originals/695659b79478247536ff.png",
     "thumbnail": "thumbs/695659b79478247536ff.webp"
-  },
-  {
-    "company": "GLA",
-    "owner": "",
-    "size": "6×6m",
-    "type": "标展",
-    "variant": "",
-    "filename": "6x6标展.jpg",
-    "original": "originals/4bc8a51ce799999ea874.jpg",
-    "thumbnail": "thumbs/4bc8a51ce799999ea874.webp"
   }
 ]
