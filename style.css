@@ -92,6 +92,9 @@ footer a { color: inherit; }
 .email-library h3 { margin: 0; font-size: 17px; }
 .email-library .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 365px), 1fr)); gap: 16px; }
 .email-library article { min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: white; overflow: hidden; }
+.business-pdf-library .grid { max-width: 860px; }
+.business-pdf-library .asset-preview { padding: 16px; }
+.business-pdf-library .asset-preview img { width: auto; max-width: 100%; max-height: 280px; }
 .asset-preview { display: grid; place-items: center; background: #eaf3fb; }
 .asset-preview img { width: 100%; height: auto; display: block; }
 .secondary .asset-preview { min-height: 154px; padding: 14px; }

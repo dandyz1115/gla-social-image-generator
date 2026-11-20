@@ -13,7 +13,7 @@
 .sponsor-filters { grid-template-columns: minmax(220px, 2fr) repeat(2, minmax(120px, 1fr)) auto; }
 .filters button { min-height: 36px; }
 .result-status { padding: 15px 0; color: var(--muted); }
-.booth-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.booth-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 16px; }
 .booth-card {
   display: flex;
   flex-direction: column;
