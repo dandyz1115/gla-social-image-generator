@@ -1,5 +1,25 @@
 [
   {
+    "company": "ASR Global Logistics",
+    "owner": "Bill",
+    "size": "3×3m",
+    "type": "标展",
+    "variant": "三面开放",
+    "filename": "ASR Global Logistics-3×3m-标展-三面开放-尺寸标注-2K.png",
+    "original": "originals/76f307fc1e5253a7a248.png",
+    "thumbnail": "thumbs/76f307fc1e5253a7a248.webp"
+  },
+  {
+    "company": "GLA",
+    "owner": "",
+    "size": "3×3m",
+    "type": "标展",
+    "variant": "三面开放 · AI模板",
+    "filename": "GLA-3×3m-标展-三面开放-AI模板-2K.png",
+    "original": "originals/e4eee416bc6c858d08c3.png",
+    "thumbnail": "thumbs/e4eee416bc6c858d08c3.webp"
+  },
+  {
     "company": "F2 LOGISTICS",
     "owner": "Mia",
     "size": "6×3m",

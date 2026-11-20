@@ -29,7 +29,10 @@ def publishable(path, root):
     if relative.parts[0].endswith("-展位效果图"):
         return True
     if relative.parts[0] == "模板":
-        return name.startswith("GLA-6×3m-特展-Option 3-") and name.endswith("-AI模板-2K")
+        return name.endswith("-AI模板-2K") and name.startswith((
+            "GLA-3×3m-标展-三面开放-",
+            "GLA-6×3m-特展-Option 3-",
+        ))
     return relative.parts[0] == "6x6米展位-3D模型" and name.startswith("GLA-") and "尺寸标注" in name
 
 
