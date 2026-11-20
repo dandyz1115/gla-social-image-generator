@@ -1,5 +1,35 @@
 [
   {
+    "company": "TalaTrans Worldwide",
+    "owner": "Bill",
+    "size": "6×3m",
+    "type": "特展",
+    "variant": "Option 3 · 三面开放",
+    "filename": "TalaTrans Worldwide-6×3m-特展-Option 3-三面开放-尺寸标注-2K.png",
+    "original": "originals/92efac3c6b609e6b9865.png",
+    "thumbnail": "thumbs/92efac3c6b609e6b9865.webp"
+  },
+  {
+    "company": "TalaTrans Worldwide",
+    "owner": "Bill",
+    "size": "6×3m",
+    "type": "标展",
+    "variant": "双前台",
+    "filename": "TalaTrans Worldwide-6×3m-标展-双前台-尺寸标注-2K.png",
+    "original": "originals/191ea423cc5381f9e71d.png",
+    "thumbnail": "thumbs/191ea423cc5381f9e71d.webp"
+  },
+  {
+    "company": "TalaTrans Worldwide",
+    "owner": "Bill",
+    "size": "3×3m",
+    "type": "标展",
+    "variant": "",
+    "filename": "TalaTrans Worldwide-3×3m-标展-尺寸标注-2K.png",
+    "original": "originals/ee831e055f1772010506.png",
+    "thumbnail": "thumbs/ee831e055f1772010506.webp"
+  },
+  {
     "company": "ALMARK",
     "owner": "Bill",
     "size": "6×3m",
