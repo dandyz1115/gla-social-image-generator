@@ -11,6 +11,40 @@ const previewImage = document.querySelector("#preview-image");
 const pageSize = 30;
 let images = [];
 let matches = [];
+let layoutFrame = 0;
+const masonryObserver = typeof ResizeObserver === "function" ? new ResizeObserver(scheduleMasonry) : null;
+
+function scheduleMasonry() {
+  if (!layoutFrame) layoutFrame = requestAnimationFrame(layoutMasonry);
+}
+
+function layoutMasonry() {
+  layoutFrame = 0;
+  const items = [...cards.children];
+  const width = cards.getBoundingClientRect().width;
+  if (!items.length || !width) {
+    cards.classList.remove("is-masonry");
+    cards.style.removeProperty("height");
+    return;
+  }
+
+  const style = getComputedStyle(cards);
+  const columns = Number(style.getPropertyValue("--gallery-columns"));
+  const gap = parseFloat(style.getPropertyValue("--gallery-gap"));
+  const columnStep = (width + gap) / columns;
+  const columnBottoms = Array(columns).fill(0);
+
+  cards.classList.add("is-masonry");
+  const heights = items.map((item) => item.getBoundingClientRect().height);
+  items.forEach((item, index) => {
+    // Keep DOM order and place each new card below the shortest column.
+    const top = Math.min(...columnBottoms);
+    const column = columnBottoms.indexOf(top);
+    item.style.transform = `translate(${column * columnStep}px, ${top}px)`;
+    columnBottoms[column] = top + heights[index] + gap;
+  });
+  cards.style.height = `${Math.max(...columnBottoms) - gap}px`;
+}
 
 function normalized(value) {
   return value.normalize("NFKC").toLowerCase().replace(/[×＊*]/g, "x").trim();
@@ -76,7 +110,13 @@ function renderPage(page) {
     card.append(button, content);
     fragment.append(card);
   }
+  masonryObserver?.disconnect();
   cards.replaceChildren(fragment);
+  if (masonryObserver) {
+    masonryObserver.observe(cards);
+    for (const card of cards.children) masonryObserver.observe(card);
+    scheduleMasonry();
+  }
   const pageCount = Math.ceil(matches.length / pageSize);
   status.textContent = matches.length
     ? `共 ${matches.length} 张 · 第 ${page} / ${pageCount} 页 · 显示第 ${start + 1}–${end} 张`
