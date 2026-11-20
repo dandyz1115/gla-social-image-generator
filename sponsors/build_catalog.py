@@ -13,7 +13,6 @@ HERE = Path(__file__).resolve().parent
 PRODUCTS = (
     ("Vanessa/eMove Global-白色迷你订书机-赞助效果图.png", "eMove Global", "Vanessa", "订书机", "白色迷你款"),
     ("一对一台卡-长桌面对面-通用版.png", "GLA 一对一台卡", "", "台卡", "长桌会谈"),
-    ("一对一桌牌效果图-空白赞助商位.png", "GLA 一对一桌牌", "", "桌牌", "赞助位示例"),
     ("参会证-人物佩戴效果图.png", "GLA 参会证", "", "参会证", "现场佩戴"),
 )
 
