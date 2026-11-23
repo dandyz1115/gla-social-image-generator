@@ -21,10 +21,20 @@
   },
   {
     "company": "GLA 深圳 2027 大头贴相册",
-    "owner": "",
+    "owner": "Matt",
     "type": "大头贴相册",
     "size": "",
-    "variant": "四款赞助总览 · 价格待议",
+    "variant": "中文总览 · 四款 · 价格待议",
+    "filename": "GLA深圳2027-大头贴相册-赞助总览-价格待议-中文.png",
+    "original": "originals/c34d6b84c7ea1d3fe480.png",
+    "thumbnail": "thumbs/c34d6b84c7ea1d3fe480.webp"
+  },
+  {
+    "company": "GLA 深圳 2027 大头贴相册",
+    "owner": "Matt",
+    "type": "大头贴相册",
+    "size": "",
+    "variant": "英文总览 · 四款 · 价格待议",
     "filename": "GLA深圳2027-大头贴相册-赞助总览-价格待议.png",
     "original": "originals/d8d8c4eba9ddc2ef063e.png",
     "thumbnail": "thumbs/d8d8c4eba9ddc2ef063e.webp"
