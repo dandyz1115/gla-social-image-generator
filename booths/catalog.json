@@ -1,5 +1,45 @@
 [
   {
+    "company": "SCX Corporation",
+    "owner": "Kevin2",
+    "size": "6×3m",
+    "type": "特展",
+    "variant": "Option 3 · 三面开放",
+    "filename": "SCX Corporation-6×3m-特展-Option 3-三面开放-尺寸标注-2K.png",
+    "original": "originals/7a0865089a2eb669151d.png",
+    "thumbnail": "thumbs/7a0865089a2eb669151d.webp"
+  },
+  {
+    "company": "SCX Corporation",
+    "owner": "Kevin2",
+    "size": "6×3m",
+    "type": "标展",
+    "variant": "双前台",
+    "filename": "SCX Corporation-6×3m-标展-双前台-尺寸标注-2K.png",
+    "original": "originals/d5d448ef7ded70dab935.png",
+    "thumbnail": "thumbs/d5d448ef7ded70dab935.webp"
+  },
+  {
+    "company": "SCX Corporation",
+    "owner": "Kevin2",
+    "size": "3×3m",
+    "type": "标展",
+    "variant": "品牌区 · 三面开放",
+    "filename": "SCX Corporation-3×3m-标展-品牌区-三面开放-尺寸标注-2K.png",
+    "original": "originals/c3033db58ec3678021e7.png",
+    "thumbnail": "thumbs/c3033db58ec3678021e7.webp"
+  },
+  {
+    "company": "SCX Corporation",
+    "owner": "Kevin2",
+    "size": "3×3m",
+    "type": "标展",
+    "variant": "核心区",
+    "filename": "SCX Corporation-3×3m-标展-核心区-尺寸标注-2K.png",
+    "original": "originals/d2e43b3fbc5993795e9b.png",
+    "thumbnail": "thumbs/d2e43b3fbc5993795e9b.webp"
+  },
+  {
     "company": "Marinair Cargo Services",
     "owner": "Vanessa",
     "size": "6×6m",
