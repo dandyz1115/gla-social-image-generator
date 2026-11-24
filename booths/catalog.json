@@ -1,5 +1,65 @@
 [
   {
+    "company": "YUEGANGWAN 粤港湾",
+    "owner": "Mandy",
+    "size": "9×3m",
+    "type": "标展",
+    "variant": "高机位",
+    "filename": "YUEGANGWAN 粤港湾-9×3m-标展-高机位-尺寸标注-2K.png",
+    "original": "originals/70726091ef9b46650b92.png",
+    "thumbnail": "thumbs/70726091ef9b46650b92.webp"
+  },
+  {
+    "company": "YUEGANGWAN 粤港湾",
+    "owner": "Mandy",
+    "size": "6×6m",
+    "type": "特展",
+    "variant": "Option 1 · 顶棚格栅",
+    "filename": "YUEGANGWAN 粤港湾-6×6m-特展-Option 1-顶棚格栅-尺寸标注-2K.png",
+    "original": "originals/4437f033b19adf69c0bb.png",
+    "thumbnail": "thumbs/4437f033b19adf69c0bb.webp"
+  },
+  {
+    "company": "YUEGANGWAN 粤港湾",
+    "owner": "Mandy",
+    "size": "6×3m",
+    "type": "特展",
+    "variant": "Option 3 · 三面开放",
+    "filename": "YUEGANGWAN 粤港湾-6×3m-特展-Option 3-三面开放-尺寸标注-2K.png",
+    "original": "originals/2e580c5edfc081366fc6.png",
+    "thumbnail": "thumbs/2e580c5edfc081366fc6.webp"
+  },
+  {
+    "company": "YUEGANGWAN 粤港湾",
+    "owner": "Mandy",
+    "size": "6×3m",
+    "type": "标展",
+    "variant": "双前台",
+    "filename": "YUEGANGWAN 粤港湾-6×3m-标展-双前台-尺寸标注-2K.png",
+    "original": "originals/90c58afa380dbd17b263.png",
+    "thumbnail": "thumbs/90c58afa380dbd17b263.webp"
+  },
+  {
+    "company": "YUEGANGWAN 粤港湾",
+    "owner": "Mandy",
+    "size": "3×3m",
+    "type": "标展",
+    "variant": "",
+    "filename": "YUEGANGWAN 粤港湾-3×3m-标展-尺寸标注-2K.png",
+    "original": "originals/894370f48b3053a2012b.png",
+    "thumbnail": "thumbs/894370f48b3053a2012b.webp"
+  },
+  {
+    "company": "Renex Global Logistics Limited",
+    "owner": "Irene",
+    "size": "3×3m",
+    "type": "标展",
+    "variant": "",
+    "filename": "Renex Global Logistics Limited-3×3m-标展-尺寸标注-2K.png",
+    "original": "originals/189821de12c117d29307.png",
+    "thumbnail": "thumbs/189821de12c117d29307.webp"
+  },
+  {
     "company": "SCX Corporation",
     "owner": "Kevin2",
     "size": "6×3m",
