@@ -1,5 +1,25 @@
 [
   {
+    "company": "Depco Logística",
+    "owner": "Bill",
+    "size": "6×3m",
+    "type": "特展",
+    "variant": "Option 3 · 三面开放",
+    "filename": "Depco Logística-6×3m-特展-Option 3-三面开放-尺寸标注-2K.png",
+    "original": "originals/29e83afa7a83dab3b58c.png",
+    "thumbnail": "thumbs/29e83afa7a83dab3b58c.webp"
+  },
+  {
+    "company": "Depco Logística",
+    "owner": "Bill",
+    "size": "3×3m",
+    "type": "标展",
+    "variant": "",
+    "filename": "Depco Logística-3×3m-标展-尺寸标注-2K.png",
+    "original": "originals/29c5eb53a5f0fc4409fa.png",
+    "thumbnail": "thumbs/29c5eb53a5f0fc4409fa.webp"
+  },
+  {
     "company": "IMEX CARGO LLC (UAE)",
     "owner": "Annie",
     "size": "6×6m",
