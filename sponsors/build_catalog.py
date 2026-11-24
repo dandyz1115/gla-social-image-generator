@@ -11,6 +11,7 @@ from PIL import Image, ImageOps
 
 HERE = Path(__file__).resolve().parent
 PRODUCTS = (
+    ("Vanessa/TCL-白色迷你订书机-赞助效果图-2K.png", "TCL", "Vanessa", "订书机", "白色迷你款 · 展会场景"),
     ("Ivy/Marsa Shipping-纸张赞助效果图-2K.png", "Marsa Shipping", "Ivy", "纸张", "英文服务清单 · 双页平铺"),
     ("深圳2027/GLA深圳2027-大头贴相册-展会手持效果图.png", "GLA 深圳 2027 大头贴相册", "", "大头贴相册", "展会手持场景"),
     ("Matt/GLA深圳2027-大头贴相册-赞助总览-价格待议-中文.png", "GLA 深圳 2027 大头贴相册", "Matt", "大头贴相册", "中文总览 · 四款 · 价格待议"),
