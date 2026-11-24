@@ -2,6 +2,66 @@
   {
     "company": "World Trade Logistics SA",
     "owner": "Irene",
+    "size": "6×6m",
+    "type": "特展",
+    "variant": "Option 4 · 转角门楣",
+    "filename": "World Trade Logistics SA-6×6m-特展-Option 4-转角门楣-尺寸标注-2K.png",
+    "original": "originals/66cb533875692799062e.png",
+    "thumbnail": "thumbs/66cb533875692799062e.webp"
+  },
+  {
+    "company": "World Trade Logistics SA",
+    "owner": "Irene",
+    "size": "6×6m",
+    "type": "特展",
+    "variant": "Option 3 · 左侧开放",
+    "filename": "World Trade Logistics SA-6×6m-特展-Option 3-左侧开放-尺寸标注-2K.png",
+    "original": "originals/49bbfaa36acfa7e36b05.png",
+    "thumbnail": "thumbs/49bbfaa36acfa7e36b05.webp"
+  },
+  {
+    "company": "World Trade Logistics SA",
+    "owner": "Irene",
+    "size": "6×6m",
+    "type": "特展",
+    "variant": "Option 2 · 弧形展墙",
+    "filename": "World Trade Logistics SA-6×6m-特展-Option 2-弧形展墙-尺寸标注-2K.png",
+    "original": "originals/b212be3ddd32e0df6e24.png",
+    "thumbnail": "thumbs/b212be3ddd32e0df6e24.webp"
+  },
+  {
+    "company": "World Trade Logistics SA",
+    "owner": "Irene",
+    "size": "6×6m",
+    "type": "特展",
+    "variant": "Option 1 · 顶棚格栅",
+    "filename": "World Trade Logistics SA-6×6m-特展-Option 1-顶棚格栅-尺寸标注-2K.png",
+    "original": "originals/023d268410b80332481b.png",
+    "thumbnail": "thumbs/023d268410b80332481b.webp"
+  },
+  {
+    "company": "World Trade Logistics SA",
+    "owner": "Irene",
+    "size": "6×3m",
+    "type": "特展",
+    "variant": "Option 3 · 三面开放",
+    "filename": "World Trade Logistics SA-6×3m-特展-Option 3-三面开放-尺寸标注-2K.png",
+    "original": "originals/9c15aff2a9c6c4f4831b.png",
+    "thumbnail": "thumbs/9c15aff2a9c6c4f4831b.webp"
+  },
+  {
+    "company": "World Trade Logistics SA",
+    "owner": "Irene",
+    "size": "6×3m",
+    "type": "标展",
+    "variant": "双前台",
+    "filename": "World Trade Logistics SA-6×3m-标展-双前台-尺寸标注-2K.png",
+    "original": "originals/83ff6591edb9c8a33217.png",
+    "thumbnail": "thumbs/83ff6591edb9c8a33217.webp"
+  },
+  {
+    "company": "World Trade Logistics SA",
+    "owner": "Irene",
     "size": "3×3m",
     "type": "标展",
     "variant": "",
