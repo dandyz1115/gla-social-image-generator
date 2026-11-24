@@ -1,5 +1,45 @@
 [
   {
+    "company": "TCL",
+    "owner": "Vanessa",
+    "size": "6×6m",
+    "type": "特展",
+    "variant": "Option 4 · 转角门楣",
+    "filename": "TCL-6×6m-特展-Option 4-转角门楣-尺寸标注-2K.png",
+    "original": "originals/a43143d9d102c6388f60.png",
+    "thumbnail": "thumbs/a43143d9d102c6388f60.webp"
+  },
+  {
+    "company": "TCL",
+    "owner": "Vanessa",
+    "size": "6×6m",
+    "type": "特展",
+    "variant": "Option 3 · 左侧开放",
+    "filename": "TCL-6×6m-特展-Option 3-左侧开放-尺寸标注-2K.png",
+    "original": "originals/d79f9388cdf904e430c2.png",
+    "thumbnail": "thumbs/d79f9388cdf904e430c2.webp"
+  },
+  {
+    "company": "TCL",
+    "owner": "Vanessa",
+    "size": "6×6m",
+    "type": "特展",
+    "variant": "Option 2 · 弧形展墙",
+    "filename": "TCL-6×6m-特展-Option 2-弧形展墙-尺寸标注-2K.png",
+    "original": "originals/574da1044cd252f314b6.png",
+    "thumbnail": "thumbs/574da1044cd252f314b6.webp"
+  },
+  {
+    "company": "TCL",
+    "owner": "Vanessa",
+    "size": "6×6m",
+    "type": "特展",
+    "variant": "Option 1 · 顶棚格栅",
+    "filename": "TCL-6×6m-特展-Option 1-顶棚格栅-尺寸标注-2K.png",
+    "original": "originals/0e014cf17f3ea0f1472d.png",
+    "thumbnail": "thumbs/0e014cf17f3ea0f1472d.webp"
+  },
+  {
     "company": "IMEX CARGO LLC (UAE)",
     "owner": "Annie",
     "size": "6×6m",
