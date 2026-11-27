@@ -9,6 +9,7 @@ const pagination = document.querySelector("#pagination");
 const preview = document.querySelector("#preview");
 const previewImage = document.querySelector("#preview-image");
 const pageSize = 30;
+let posterLanguage = "zh";
 let images = [];
 let matches = [];
 let layoutFrame = 0;
@@ -72,7 +73,8 @@ function renderPage(page) {
   const start = (page - 1) * pageSize;
   const end = Math.min(start + pageSize, matches.length);
   const fragment = document.createDocumentFragment();
-  for (const entry of matches.slice(start, end)) {
+  for (const baseEntry of matches.slice(start, end)) {
+    const entry = posterLanguage === "en" && baseEntry.originalEn ? {...baseEntry, company:baseEntry.companyEn || baseEntry.company, type:baseEntry.companyEn || baseEntry.type, variant:baseEntry.variantEn || baseEntry.variant, original:baseEntry.originalEn, thumbnail:baseEntry.thumbnailEn || baseEntry.thumbnail, filename:baseEntry.filenameEn} : baseEntry;
     const card = document.createElement("article");
     card.className = "booth-card";
     const button = document.createElement("button");
@@ -108,11 +110,11 @@ function renderPage(page) {
     downloadLink(link, entry);
     content.append(link);
     const actions = document.createElement("div"); actions.className = "bilingual-actions";
-    actions.append(link);
-    if (entry.originalEn) {
+    downloadLink(link, baseEntry); actions.append(link);
+    if (baseEntry.originalEn) {
       const englishPreview = document.createElement("button");
-      englishPreview.className = "quiet"; englishPreview.type = "button"; englishPreview.textContent = "预览英文";
-      englishPreview.addEventListener("click", () => openPreview({...entry, original: entry.originalEn, filename: entry.filenameEn, company: entry.company + " · English"}));
+      englishPreview.className = "quiet"; englishPreview.type = "button"; englishPreview.textContent = posterLanguage === "en" ? "预览中文" : "预览英文";
+      englishPreview.addEventListener("click", () => openPreview(posterLanguage === "en" ? baseEntry : {...baseEntry, original:baseEntry.originalEn, filename:baseEntry.filenameEn, company:baseEntry.companyEn || baseEntry.company}));
       const englishDownload = document.createElement("a"); englishDownload.className = "download";
       englishDownload.href = entry.originalEn; englishDownload.download = entry.filenameEn; englishDownload.textContent = "下载英文";
       actions.append(englishPreview, englishDownload);
@@ -184,7 +186,7 @@ async function loadImages() {
     for (const entry of images) {
       const compactSize = entry.size.replace(/[^0-9]/g, "");
       const reversedSize = entry.size.replace(/^(\d+)×(\d+)m$/, "$2×$1m");
-      entry.searchText = normalized([entry.filename, entry.company, describe(entry), entry.variant, compactSize, reversedSize, reversedSize.replace(/[^0-9]/g, "")].join(" "));
+      entry.searchText = normalized([entry.filename, entry.company, entry.companyEn || "", describe(entry), entry.variant, compactSize, reversedSize, reversedSize.replace(/[^0-9]/g, "")].join(" "));
     }
     for (const field of fields) {
       const values = [...new Set(images.map((entry) => entry[field]).filter(Boolean))].sort();
@@ -198,6 +200,11 @@ async function loadImages() {
       applyFilters();
       search.focus();
     });
+    document.querySelectorAll("[data-lang]").forEach(button => button.addEventListener("click", () => {
+      posterLanguage = button.dataset.lang;
+      document.querySelectorAll("[data-lang]").forEach(other => other.setAttribute("aria-pressed", String(other === button)));
+      applyFilters();
+    }));
     applyFilters();
   } catch {
     status.textContent = "图库暂时无法加载，请刷新页面重试。";
