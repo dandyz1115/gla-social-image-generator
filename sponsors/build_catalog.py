@@ -13,6 +13,8 @@ HERE = Path(__file__).resolve().parent
 PRODUCTS = (
     ("深圳2027/GLA深圳2027-万能转换头赞助-英文海报.png", "GLA 深圳 2027 万能转换头赞助", "", "万能转换头", "英文招商海报 · YOUR LOGO赞助位 · 含报名二维码"),
     ("深圳2027/GLA深圳2027-万能转换头赞助-中文海报.png", "GLA 深圳 2027 万能转换头赞助", "", "万能转换头", "中文招商海报 · YOUR LOGO赞助位 · 含报名二维码"),
+    ("深圳2027/GLA深圳2027-订书机赞助-中文海报.png", "GLA 深圳 2027 订书机赞助", "", "订书机", "中文招商海报 · YOUR LOGO赞助位 · 含报名二维码"),
+    ("深圳2027/GLA深圳2027-订书机赞助-英文海报.png", "GLA 深圳 2027 订书机赞助", "", "订书机", "英文招商海报 · YOUR LOGO赞助位 · 含报名二维码"),
     ("Vanessa/TCL-白色迷你订书机-赞助效果图-2K.png", "TCL", "Vanessa", "订书机", "白色迷你款 · 展会场景"),
     ("Ivy/Marsa Shipping-纸张赞助效果图-2K.png", "Marsa Shipping", "Ivy", "纸张", "英文服务清单 · 双页平铺"),
     ("深圳2027/GLA深圳2027-大头贴相册-展会手持效果图.png", "GLA 深圳 2027 大头贴相册", "", "大头贴相册", "展会手持场景"),
@@ -58,7 +60,10 @@ def build(source):
     chinese = next(entry for entry in entries if "中文海报" in entry["filename"])
     english_names = {'万能转换头赞助商': 'Universal Travel Adapter Sponsorship', '订书机赞助商': 'Stapler Sponsorship', '大会护照手册赞助商': 'Conference Passport Sponsorship', '演讲赞助商': 'Speaking Sponsorship', 'Wi-Fi赞助商': 'Wi-Fi Sponsorship', '资料宣传册赞助商': 'Promotional Brochure Sponsorship', '一对一系统赞助商': '1-on-1 System Sponsorship', '广告牌赞助商': 'Billboard Sponsorship', '吊旗赞助商': 'Hanging Banner Sponsorship', '深圳一日游赞助商': 'Shenzhen Day Tour Sponsorship', 'GLA APP赞助商': 'GLA App Sponsorship', '行李吊牌赞助商': 'Luggage Tag Sponsorship', '16届大会线上相册赞助商': 'Conference Online Album Sponsorship', '大会指引牌赞助商': 'Wayfinding Sign Sponsorship', '女性论坛礼品赞助商': 'Women’s Forum Gift Sponsorship', '福田会展中心主入口视频投放赞助商': 'Main Entrance Video Advertising', '拍立得相纸赞助商': 'Instant Photo Paper Sponsorship', '总冠名': 'Title Sponsorship', '协办单位': 'Co-organizer', '战略合作伙伴': 'Strategic Partner', '支持单位': 'Supporting Organization', '欢迎晚宴冠名': 'Gala Dinner Title Sponsorship', '鸡尾酒会冠名': 'Cocktail Reception Title Sponsorship', '酒水赞助商': 'Beverage Sponsorship', '自助午餐赞助商': 'Buffet Lunch Sponsorship', '欢迎晚宴桌号赞助商': 'Gala Dinner Table Number Sponsorship', '室内打卡点赞助商': 'Indoor Photo Spot Sponsorship', '茶歇赞助商': 'Coffee Break Sponsorship', '鸡尾酒会桌号赞助商': 'Cocktail Reception Table Number Sponsorship', '无声视频赞助商': 'Silent Video Sponsorship', '晚宴抽奖礼品赞助商': 'Gala Lucky Draw Gift Sponsorship'}
     english_notes = {"资料宣传册赞助商": "Brochures in delegate backpacks / on opening ceremony tables", "广告牌赞助商": "3m × 5m", "吊旗赞助商": "Exclusive package available on request", "女性论坛礼品赞助商": "SHEO only"}
-    legacy_entries = [entry for entry in entries if "万能转换头赞助-" not in entry["filename"]]
+    overrides = json.loads((HERE / "poster_overrides.json").read_text())
+    poster_filenames = {filename for pair in overrides.values() for filename in pair.values()}
+    poster_assets = {entry["filename"]: entry for entry in entries if entry["filename"] in poster_filenames}
+    legacy_entries = [entry for entry in entries if entry["filename"] not in poster_filenames]
     entries = [
         dict(chinese, company=item["name"], companyEn=english_names[item["name"]], type=item["name"], thumbnailEn=english["thumbnail"],
              variantEn="Available slots × " + str(item["quantity"]) + (" · " + english_notes[item["name"]] if item["name"] in english_notes else "") + " · Shared sample (pending replacement)",
@@ -69,6 +74,16 @@ def build(source):
         for item in inventory["items"]
     ]
 
+    for entry in entries:
+        if entry["company"] not in overrides:
+            continue
+        pair = overrides[entry["company"]]
+        zh, en = poster_assets[pair["zh"]], poster_assets[pair["en"]]
+        entry.update(original=zh["original"], thumbnail=zh["thumbnail"], filename=zh["filename"],
+                     originalEn=en["original"], thumbnailEn=en["thumbnail"], filenameEn=en["filename"],
+                     posterIsPlaceholder=False)
+        entry["variant"] = entry["variant"].replace("统一海报示例（待替换）", "中英文独立海报")
+        entry["variantEn"] = entry["variantEn"].replace("Shared sample (pending replacement)", "Product-specific poster")
     entries = entries + legacy_entries
     (HERE / "catalog.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
