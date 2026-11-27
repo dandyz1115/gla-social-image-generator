@@ -17,6 +17,62 @@ PRODUCTS = (
     ("深圳2027/GLA深圳2027-订书机赞助-英文海报.png", "GLA 深圳 2027 订书机赞助", "", "订书机", "英文招商海报 · YOUR LOGO赞助位 · 含报名二维码"),
     ("深圳2027/GLA深圳2027-大会护照手册赞助-中文海报.png", "GLA 深圳 2027 大会护照手册赞助", "", "大会护照手册", "中文招商海报 · YOUR LOGO赞助位 · 含报名二维码"),
     ("深圳2027/GLA深圳2027-大会护照手册赞助-英文海报.png", "GLA 深圳 2027 大会护照手册赞助", "", "大会护照手册", "英文招商海报 · YOUR LOGO赞助位 · 含报名二维码"),
+    ('深圳2027/GLA深圳2027-演讲赞助-中文海报.png', 'GLA 深圳 2027 演讲赞助', '', '演讲赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-演讲赞助-英文海报.png', 'GLA 深圳 2027 演讲赞助', '', '演讲赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-Wi-Fi赞助-中文海报.png', 'GLA 深圳 2027 Wi-Fi赞助', '', 'Wi-Fi赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-Wi-Fi赞助-英文海报.png', 'GLA 深圳 2027 Wi-Fi赞助', '', 'Wi-Fi赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-资料宣传册赞助-中文海报.png', 'GLA 深圳 2027 资料宣传册赞助', '', '资料宣传册赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-资料宣传册赞助-英文海报.png', 'GLA 深圳 2027 资料宣传册赞助', '', '资料宣传册赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-一对一系统赞助-中文海报.png', 'GLA 深圳 2027 一对一系统赞助', '', '一对一系统赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-一对一系统赞助-英文海报.png', 'GLA 深圳 2027 一对一系统赞助', '', '一对一系统赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-广告牌赞助-中文海报.png', 'GLA 深圳 2027 广告牌赞助', '', '广告牌赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-广告牌赞助-英文海报.png', 'GLA 深圳 2027 广告牌赞助', '', '广告牌赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-吊旗赞助-中文海报.png', 'GLA 深圳 2027 吊旗赞助', '', '吊旗赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-吊旗赞助-英文海报.png', 'GLA 深圳 2027 吊旗赞助', '', '吊旗赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-深圳一日游赞助-中文海报.png', 'GLA 深圳 2027 深圳一日游赞助', '', '深圳一日游赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-深圳一日游赞助-英文海报.png', 'GLA 深圳 2027 深圳一日游赞助', '', '深圳一日游赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-GLA APP赞助-中文海报.png', 'GLA 深圳 2027 GLA APP赞助', '', 'GLA APP赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-GLA APP赞助-英文海报.png', 'GLA 深圳 2027 GLA APP赞助', '', 'GLA APP赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-行李吊牌赞助-中文海报.png', 'GLA 深圳 2027 行李吊牌赞助', '', '行李吊牌赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-行李吊牌赞助-英文海报.png', 'GLA 深圳 2027 行李吊牌赞助', '', '行李吊牌赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-大会线上相册赞助-中文海报.png', 'GLA 深圳 2027 大会线上相册赞助', '', '16届大会线上相册赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-大会线上相册赞助-英文海报.png', 'GLA 深圳 2027 大会线上相册赞助', '', '16届大会线上相册赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-大会指引牌赞助-中文海报.png', 'GLA 深圳 2027 大会指引牌赞助', '', '大会指引牌赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-大会指引牌赞助-英文海报.png', 'GLA 深圳 2027 大会指引牌赞助', '', '大会指引牌赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-女性论坛礼品赞助-中文海报.png', 'GLA 深圳 2027 女性论坛礼品赞助', '', '女性论坛礼品赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-女性论坛礼品赞助-英文海报.png', 'GLA 深圳 2027 女性论坛礼品赞助', '', '女性论坛礼品赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-主入口视频投放赞助-中文海报.png', 'GLA 深圳 2027 主入口视频投放赞助', '', '福田会展中心主入口视频投放赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-主入口视频投放赞助-英文海报.png', 'GLA 深圳 2027 主入口视频投放赞助', '', '福田会展中心主入口视频投放赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-拍立得相纸赞助-中文海报.png', 'GLA 深圳 2027 拍立得相纸赞助', '', '拍立得相纸赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-拍立得相纸赞助-英文海报.png', 'GLA 深圳 2027 拍立得相纸赞助', '', '拍立得相纸赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-总冠名赞助-中文海报.png', 'GLA 深圳 2027 总冠名赞助', '', '总冠名', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-总冠名赞助-英文海报.png', 'GLA 深圳 2027 总冠名赞助', '', '总冠名', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-协办单位合作-中文海报.png', 'GLA 深圳 2027 协办单位合作', '', '协办单位', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-协办单位合作-英文海报.png', 'GLA 深圳 2027 协办单位合作', '', '协办单位', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-战略合作伙伴-中文海报.png', 'GLA 深圳 2027 战略合作伙伴', '', '战略合作伙伴', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-战略合作伙伴-英文海报.png', 'GLA 深圳 2027 战略合作伙伴', '', '战略合作伙伴', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-支持单位合作-中文海报.png', 'GLA 深圳 2027 支持单位合作', '', '支持单位', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-支持单位合作-英文海报.png', 'GLA 深圳 2027 支持单位合作', '', '支持单位', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-欢迎晚宴冠名-中文海报.png', 'GLA 深圳 2027 欢迎晚宴冠名', '', '欢迎晚宴冠名', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-欢迎晚宴冠名-英文海报.png', 'GLA 深圳 2027 欢迎晚宴冠名', '', '欢迎晚宴冠名', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-鸡尾酒会冠名-中文海报.png', 'GLA 深圳 2027 鸡尾酒会冠名', '', '鸡尾酒会冠名', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-鸡尾酒会冠名-英文海报.png', 'GLA 深圳 2027 鸡尾酒会冠名', '', '鸡尾酒会冠名', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-酒水赞助-中文海报.png', 'GLA 深圳 2027 酒水赞助', '', '酒水赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-酒水赞助-英文海报.png', 'GLA 深圳 2027 酒水赞助', '', '酒水赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-自助午餐赞助-中文海报.png', 'GLA 深圳 2027 自助午餐赞助', '', '自助午餐赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-自助午餐赞助-英文海报.png', 'GLA 深圳 2027 自助午餐赞助', '', '自助午餐赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-欢迎晚宴桌号赞助-中文海报.png', 'GLA 深圳 2027 欢迎晚宴桌号赞助', '', '欢迎晚宴桌号赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-欢迎晚宴桌号赞助-英文海报.png', 'GLA 深圳 2027 欢迎晚宴桌号赞助', '', '欢迎晚宴桌号赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-室内打卡点赞助-中文海报.png', 'GLA 深圳 2027 室内打卡点赞助', '', '室内打卡点赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-室内打卡点赞助-英文海报.png', 'GLA 深圳 2027 室内打卡点赞助', '', '室内打卡点赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-茶歇赞助-中文海报.png', 'GLA 深圳 2027 茶歇赞助', '', '茶歇赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-茶歇赞助-英文海报.png', 'GLA 深圳 2027 茶歇赞助', '', '茶歇赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-鸡尾酒会桌号赞助-中文海报.png', 'GLA 深圳 2027 鸡尾酒会桌号赞助', '', '鸡尾酒会桌号赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-鸡尾酒会桌号赞助-英文海报.png', 'GLA 深圳 2027 鸡尾酒会桌号赞助', '', '鸡尾酒会桌号赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-无声视频赞助-中文海报.png', 'GLA 深圳 2027 无声视频赞助', '', '无声视频赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-无声视频赞助-英文海报.png', 'GLA 深圳 2027 无声视频赞助', '', '无声视频赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-晚宴抽奖礼品赞助-中文海报.png', 'GLA 深圳 2027 晚宴抽奖礼品赞助', '', '晚宴抽奖礼品赞助商', '中文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
+    ('深圳2027/GLA深圳2027-晚宴抽奖礼品赞助-英文海报.png', 'GLA 深圳 2027 晚宴抽奖礼品赞助', '', '晚宴抽奖礼品赞助商', '英文招商海报 · YOUR LOGO赞助位 · 含报名二维码'),
     ("Vanessa/TCL-白色迷你订书机-赞助效果图-2K.png", "TCL", "Vanessa", "订书机", "白色迷你款 · 展会场景"),
     ("Ivy/Marsa Shipping-纸张赞助效果图-2K.png", "Marsa Shipping", "Ivy", "纸张", "英文服务清单 · 双页平铺"),
     ("深圳2027/GLA深圳2027-大头贴相册-展会手持效果图.png", "GLA 深圳 2027 大头贴相册", "", "大头贴相册", "展会手持场景"),
@@ -55,12 +111,12 @@ def build(source):
                             filename=local.name, original=original, thumbnail=thumbnail))
 
     # Preserve the original product mockups; publish current sale resources as
-    # one card per project, sharing the approved bilingual sample temporarily.
+    # one card per project, using the approved product-specific bilingual posters.
     (HERE / "effect-catalog.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     inventory = json.loads((HERE / "availability.json").read_text())
     english = next(entry for entry in entries if "英文海报" in entry["filename"])
     chinese = next(entry for entry in entries if "中文海报" in entry["filename"])
-    english_names = {'万能转换头赞助商': 'Universal Travel Adapter Sponsorship', '订书机赞助商': 'Stapler Sponsorship', '大会护照手册赞助商': 'Conference Passport Sponsorship', '演讲赞助商': 'Speaking Sponsorship', 'Wi-Fi赞助商': 'Wi-Fi Sponsorship', '资料宣传册赞助商': 'Promotional Brochure Sponsorship', '一对一系统赞助商': '1-on-1 System Sponsorship', '广告牌赞助商': 'Billboard Sponsorship', '吊旗赞助商': 'Hanging Banner Sponsorship', '深圳一日游赞助商': 'Shenzhen Day Tour Sponsorship', 'GLA APP赞助商': 'GLA App Sponsorship', '行李吊牌赞助商': 'Luggage Tag Sponsorship', '16届大会线上相册赞助商': 'Conference Online Album Sponsorship', '大会指引牌赞助商': 'Wayfinding Sign Sponsorship', '女性论坛礼品赞助商': 'Women’s Forum Gift Sponsorship', '福田会展中心主入口视频投放赞助商': 'Main Entrance Video Advertising', '拍立得相纸赞助商': 'Instant Photo Paper Sponsorship', '总冠名': 'Title Sponsorship', '协办单位': 'Co-organizer', '战略合作伙伴': 'Strategic Partner', '支持单位': 'Supporting Organization', '欢迎晚宴冠名': 'Gala Dinner Title Sponsorship', '鸡尾酒会冠名': 'Cocktail Reception Title Sponsorship', '酒水赞助商': 'Beverage Sponsorship', '自助午餐赞助商': 'Buffet Lunch Sponsorship', '欢迎晚宴桌号赞助商': 'Gala Dinner Table Number Sponsorship', '室内打卡点赞助商': 'Indoor Photo Spot Sponsorship', '茶歇赞助商': 'Coffee Break Sponsorship', '鸡尾酒会桌号赞助商': 'Cocktail Reception Table Number Sponsorship', '无声视频赞助商': 'Silent Video Sponsorship', '晚宴抽奖礼品赞助商': 'Gala Lucky Draw Gift Sponsorship'}
+    english_names = {'万能转换头赞助商': 'Universal Travel Adapter Sponsorship', '订书机赞助商': 'Stapler Sponsorship', '大会护照手册赞助商': 'Conference Passport Sponsorship', '演讲赞助商': 'Speaking Sponsorship', 'Wi-Fi赞助商': 'Wi-Fi Sponsorship', '资料宣传册赞助商': 'Promotional Brochure Sponsorship', '一对一系统赞助商': '1-on-1 System Sponsorship', '广告牌赞助商': 'Billboard Sponsorship', '吊旗赞助商': 'Hanging Banner Sponsorship', '深圳一日游赞助商': 'Shenzhen Day Tour Sponsorship', 'GLA APP赞助商': 'GLA App Sponsorship', '行李吊牌赞助商': 'Luggage Tag Sponsorship', '16届大会线上相册赞助商': 'Conference Online Album Sponsorship', '大会指引牌赞助商': 'Wayfinding Sign Sponsorship', '女性论坛礼品赞助商': 'W.I.L.L Club Forum Gift Sponsorship', '福田会展中心主入口视频投放赞助商': 'Main Entrance Video Advertising', '拍立得相纸赞助商': 'Instant Photo Paper Sponsorship', '总冠名': 'Title Sponsorship', '协办单位': 'Co-organizer', '战略合作伙伴': 'Strategic Partner', '支持单位': 'Supporting Organization', '欢迎晚宴冠名': 'Gala Dinner Title Sponsorship', '鸡尾酒会冠名': 'Cocktail Reception Title Sponsorship', '酒水赞助商': 'Beverage Sponsorship', '自助午餐赞助商': 'Buffet Lunch Sponsorship', '欢迎晚宴桌号赞助商': 'Gala Dinner Table Number Sponsorship', '室内打卡点赞助商': 'Indoor Photo Spot Sponsorship', '茶歇赞助商': 'Coffee Break Sponsorship', '鸡尾酒会桌号赞助商': 'Cocktail Reception Table Number Sponsorship', '无声视频赞助商': 'Silent Video Sponsorship', '晚宴抽奖礼品赞助商': 'Gala Lucky Draw Gift Sponsorship'}
     english_notes = {"资料宣传册赞助商": "Brochures in delegate backpacks / on opening ceremony tables", "广告牌赞助商": "3m × 5m", "吊旗赞助商": "Exclusive package available on request", "女性论坛礼品赞助商": "SHEO only"}
     overrides = json.loads((HERE / "poster_overrides.json").read_text())
     poster_filenames = {filename for pair in overrides.values() for filename in pair.values()}
