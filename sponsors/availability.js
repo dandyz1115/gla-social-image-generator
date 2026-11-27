@@ -4,7 +4,7 @@
   const status = document.getElementById("availability-status");
   const input = document.getElementById("availability-search");
   const buttons = [...document.querySelectorAll("[data-availability]")];
-  let items = [], mode = "recommended";
+  let items = [], mode = "all";
   function render() {
     const query = input.value.trim().toLocaleLowerCase();
     const shown = items.filter(item => (mode === "all" || item.recommended) && [item.name, item.note].join(" ").toLocaleLowerCase().includes(query));
