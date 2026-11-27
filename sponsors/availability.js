@@ -15,7 +15,14 @@
       const header = document.createElement("header");
       const title = document.createElement("h3"); title.textContent = item.name;
       const quantity = document.createElement("span"); quantity.className = "quantity"; quantity.textContent = "× " + item.quantity;
+      const posterLink = document.createElement("a");
+      posterLink.href = item.poster; posterLink.target = "_blank"; posterLink.rel = "noopener";
+      posterLink.className = "availability-poster";
+      posterLink.setAttribute("aria-label", "查看" + item.name + "的统一海报示例");
+      const poster = document.createElement("img"); poster.src = item.thumbnail; poster.alt = "暂用万能转换头赞助海报，后续替换"; poster.loading = "lazy"; poster.decoding = "async";
+      posterLink.append(poster); card.append(posterLink);
       header.append(title, quantity); card.append(header);
+      const sample = document.createElement("p"); sample.className = "placeholder-label"; sample.textContent = "统一海报示例 · 待替换"; card.append(sample);
       if (item.note) { const note = document.createElement("p"); note.textContent = item.note; card.append(note); }
       if (item.recommended) { const tag = document.createElement("p"); tag.className = "recommended"; tag.textContent = "首推赞助"; card.append(tag); }
       list.append(card);
