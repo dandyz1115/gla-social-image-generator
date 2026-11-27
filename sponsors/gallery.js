@@ -106,17 +106,14 @@ function renderPage(page) {
     }
     const link = document.createElement("a");
     link.className = "download";
-    link.textContent = baseEntry.originalEn ? "下载中文" : "下载原图";
+    link.textContent = "下载原图";
     link.setAttribute("aria-label", "下载 " + entry.company + " " + describe(entry) + " 原图");
     downloadLink(link, entry);
     content.append(link);
     if (baseEntry.originalEn) {
-    const actions = document.createElement("div"); actions.className = "bilingual-actions";
-    downloadLink(link, baseEntry); actions.append(link);
-    if (baseEntry.originalEn) {
       const tabs = document.createElement("div"); tabs.className = "card-languages";
       tabs.setAttribute("role", "group"); tabs.setAttribute("aria-label", "海报语言");
-      for (const [language, label] of [["zh","中文"],["en","English"]]) {
+      for (const [language, label] of [["zh","中文海报"],["en","英文海报"]]) {
         const tab = document.createElement("button"); tab.type = "button"; tab.className = "quiet"; tab.textContent = label;
         tab.setAttribute("aria-pressed", String(language === posterLanguage));
         tab.addEventListener("click", () => {
@@ -129,17 +126,14 @@ function renderPage(page) {
           const badge = content.querySelector(".priority-label");
           if (badge) badge.textContent = language === "en" ? "Featured" : "首推赞助";
           button.setAttribute("aria-label", "预览 " + entry.company);
+          downloadLink(link, entry);
+          link.setAttribute("aria-label", "下载 " + entry.company + " 原图");
           for (const other of tabs.children) other.setAttribute("aria-pressed", String(other === tab));
           scheduleMasonry();
         });
         tabs.append(tab);
       }
-      content.append(tabs);
-      const englishDownload = document.createElement("a"); englishDownload.className = "download";
-      englishDownload.href = entry.originalEn; englishDownload.download = entry.filenameEn; englishDownload.textContent = "下载英文";
-      actions.append(englishDownload);
-    }
-    content.append(actions);
+      content.insertBefore(tabs, link);
     }
     if (entry.recommended) {
       const badge = document.createElement("p"); badge.className = "priority-label"; badge.textContent = "首推赞助"; content.prepend(badge);
