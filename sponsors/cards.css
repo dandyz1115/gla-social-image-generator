@@ -1,6 +1,5 @@
 .bilingual-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:12px}.bilingual-actions .quiet{font:inherit}.priority-label{color:#004EA2;font-weight:700;margin-bottom:8px}.inventory-note{color:#536780;margin:16px 0;font-size:14px}
 
-.language-options{display:flex;gap:8px;margin:20px 0}
-.language-options button{font:inherit;cursor:pointer;padding:8px 20px;border:1px solid #dae5ef;border-radius:5px;background:#fff;color:#12253c}
-.language-options button[aria-pressed="true"]{background:#004ea2;border-color:#004ea2;color:#fff}
-.language-options{align-items:center}
+.card-languages{display:flex;gap:6px;margin-top:8px}
+.card-languages button{font:inherit;cursor:pointer;padding:5px 10px;border:1px solid #dae5ef;border-radius:4px;background:white;color:#004ea2}
+.card-languages button[aria-pressed="true"]{background:#004ea2;border-color:#004ea2;color:white}

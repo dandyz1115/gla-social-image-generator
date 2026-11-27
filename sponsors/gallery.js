@@ -9,7 +9,7 @@ const pagination = document.querySelector("#pagination");
 const preview = document.querySelector("#preview");
 const previewImage = document.querySelector("#preview-image");
 const pageSize = 30;
-let posterLanguage = "zh";
+const posterLanguages = new Map();
 let images = [];
 let matches = [];
 let layoutFrame = 0;
@@ -74,7 +74,8 @@ function renderPage(page) {
   const end = Math.min(start + pageSize, matches.length);
   const fragment = document.createDocumentFragment();
   for (const baseEntry of matches.slice(start, end)) {
-    const entry = posterLanguage === "en" && baseEntry.originalEn ? {...baseEntry, company:baseEntry.companyEn || baseEntry.company, type:baseEntry.companyEn || baseEntry.type, variant:baseEntry.variantEn || baseEntry.variant, original:baseEntry.originalEn, thumbnail:baseEntry.thumbnailEn || baseEntry.thumbnail, filename:baseEntry.filenameEn} : baseEntry;
+    let posterLanguage = posterLanguages.get(baseEntry.company) || "zh";
+    let entry = posterLanguage === "en" && baseEntry.originalEn ? {...baseEntry, company:baseEntry.companyEn || baseEntry.company, type:baseEntry.companyEn || baseEntry.type, variant:baseEntry.variantEn || baseEntry.variant, original:baseEntry.originalEn, thumbnail:baseEntry.thumbnailEn || baseEntry.thumbnail, filename:baseEntry.filenameEn} : baseEntry;
     const card = document.createElement("article");
     card.className = "booth-card";
     const button = document.createElement("button");
@@ -113,12 +114,30 @@ function renderPage(page) {
     const actions = document.createElement("div"); actions.className = "bilingual-actions";
     downloadLink(link, baseEntry); actions.append(link);
     if (baseEntry.originalEn) {
-      const englishPreview = document.createElement("button");
-      englishPreview.className = "quiet"; englishPreview.type = "button"; englishPreview.textContent = posterLanguage === "en" ? "预览中文" : "预览英文";
-      englishPreview.addEventListener("click", () => openPreview(posterLanguage === "en" ? baseEntry : {...baseEntry, original:baseEntry.originalEn, filename:baseEntry.filenameEn, company:baseEntry.companyEn || baseEntry.company}));
+      const tabs = document.createElement("div"); tabs.className = "card-languages";
+      tabs.setAttribute("role", "group"); tabs.setAttribute("aria-label", "海报语言");
+      for (const [language, label] of [["zh","中文"],["en","English"]]) {
+        const tab = document.createElement("button"); tab.type = "button"; tab.className = "quiet"; tab.textContent = label;
+        tab.setAttribute("aria-pressed", String(language === posterLanguage));
+        tab.addEventListener("click", () => {
+          posterLanguage = language; posterLanguages.set(baseEntry.company, language);
+          entry = language === "en" ? {...baseEntry, company:baseEntry.companyEn, type:baseEntry.companyEn, variant:baseEntry.variantEn, original:baseEntry.originalEn, thumbnail:baseEntry.thumbnailEn, filename:baseEntry.filenameEn} : baseEntry;
+          thumbnail.src = entry.thumbnail;
+          title.textContent = entry.company; meta.textContent = describe(entry);
+          const variantText = content.querySelector(".booth-variant");
+          if (variantText) variantText.textContent = entry.variant;
+          const badge = content.querySelector(".priority-label");
+          if (badge) badge.textContent = language === "en" ? "Featured" : "首推赞助";
+          button.setAttribute("aria-label", "预览 " + entry.company);
+          for (const other of tabs.children) other.setAttribute("aria-pressed", String(other === tab));
+          scheduleMasonry();
+        });
+        tabs.append(tab);
+      }
+      content.append(tabs);
       const englishDownload = document.createElement("a"); englishDownload.className = "download";
       englishDownload.href = entry.originalEn; englishDownload.download = entry.filenameEn; englishDownload.textContent = "下载英文";
-      actions.append(englishPreview, englishDownload);
+      actions.append(englishDownload);
     }
     content.append(actions);
     }
@@ -202,11 +221,6 @@ async function loadImages() {
       applyFilters();
       search.focus();
     });
-    document.querySelectorAll("[data-lang]").forEach(button => button.addEventListener("click", () => {
-      posterLanguage = button.dataset.lang;
-      document.querySelectorAll("[data-lang]").forEach(other => other.setAttribute("aria-pressed", String(other === button)));
-      applyFilters();
-    }));
     applyFilters();
   } catch {
     status.textContent = "图库暂时无法加载，请刷新页面重试。";
