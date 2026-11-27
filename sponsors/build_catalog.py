@@ -11,6 +11,7 @@ from PIL import Image, ImageOps
 
 HERE = Path(__file__).resolve().parent
 PRODUCTS = (
+    ("深圳2027/GLA深圳2027-万能转换头赞助-英文海报.png", "GLA 深圳 2027 万能转换头赞助", "", "万能转换头", "英文招商海报 · YOUR LOGO赞助位 · 含报名二维码"),
     ("深圳2027/GLA深圳2027-万能转换头赞助-中文海报.png", "GLA 深圳 2027 万能转换头赞助", "", "万能转换头", "中文招商海报 · YOUR LOGO赞助位 · 含报名二维码"),
     ("Vanessa/TCL-白色迷你订书机-赞助效果图-2K.png", "TCL", "Vanessa", "订书机", "白色迷你款 · 展会场景"),
     ("Ivy/Marsa Shipping-纸张赞助效果图-2K.png", "Marsa Shipping", "Ivy", "纸张", "英文服务清单 · 双页平铺"),
@@ -48,6 +49,21 @@ def build(source):
             preview.save(HERE / thumbnail, "WEBP", quality=80)
         entries.append(dict(company=title, owner=owner, type=kind, size="", variant=variant,
                             filename=local.name, original=original, thumbnail=thumbnail))
+
+    # Preserve the original product mockups; publish current sale resources as
+    # one card per project, sharing the approved bilingual sample temporarily.
+    (HERE / "effect-catalog.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    inventory = json.loads((HERE / "availability.json").read_text())
+    english = next(entry for entry in entries if "英文海报" in entry["filename"])
+    chinese = next(entry for entry in entries if "中文海报" in entry["filename"])
+    entries = [
+        dict(chinese, company=item["name"], type=item["name"],
+             priority="首推赞助" if item["recommended"] else "其他待售",
+             recommended=item["recommended"], quantity=item["quantity"],
+             variant="待售名额 × " + str(item["quantity"]) + (" · " + item["note"] if item["note"] else "") + " · 统一海报示例（待替换）",
+             originalEn=english["original"], filenameEn=english["filename"])
+        for item in inventory["items"]
+    ]
 
     (HERE / "catalog.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

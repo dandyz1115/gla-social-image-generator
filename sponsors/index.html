@@ -8,9 +8,8 @@
   <link rel="icon" href="../assets/gla-blue.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../booths/gallery.css?v=5">
-  <script src="../booths/gallery.js?v=5" defer></script>
-  <link rel="stylesheet" href="./availability.css?v=2">
-  <script src="./availability.js?v=2" defer></script>
+  <script src="./gallery.js?v=1" defer></script>
+  <link rel="stylesheet" href="./cards.css?v=1">
 </head>
 <body>
   <header class="masthead">
@@ -28,27 +27,17 @@
   <main class="booth-library">
     <header class="intro">
       <h1>赞助产品效果图</h1>
-      <p>按产品、品牌或归属人查找，预览并下载原图。</p>
-      <p><a href="./originals/cafd71c59901c4cea4c2.png" target="_blank" rel="noopener">查看最新万能转换头赞助海报</a> · <a href="./originals/cafd71c59901c4cea4c2.png" download="GLA深圳2027-万能转换头赞助-中文海报.png">下载高清PNG</a></p>
+      <p>31项可售赞助资源，其中17项首推。中英文海报分开预览、下载；当前暂用万能转换头统一样板，后续逐项替换。</p>
+      <p><a href="./originals/0e6a849e82c15cb92f66.png" target="_blank" rel="noopener">中文样板海报</a> · <a href="./originals/c3a1f8d526ee52df02ae.png" target="_blank" rel="noopener">English poster</a></p>
     </header>
-    <section class="availability" aria-labelledby="availability-title">
-      <div class="availability-heading"><div><h2 id="availability-title">深圳2027 · 可售赞助资源</h2><p>针对客户需求，选取1—2项赞助，联系项目组定制销售方案。</p></div><span>清单更新：2026-11-27</span></div>
-      <div class="availability-controls" role="group" aria-label="赞助清单筛选">
-        <button type="button" data-availability="recommended" aria-pressed="false">首推赞助</button>
-        <button type="button" class="active" data-availability="all" aria-pressed="true">全部待售</button>
-        <label>搜索赞助<input id="availability-search" type="search" placeholder="例如演讲、行李吊牌" autocomplete="off"></label>
-      </div>
-      <p id="availability-status" role="status">正在加载赞助清单…</p>
-      <div id="availability-list"></div>
-      <p class="availability-note">效果图暂用万能转换头统一样板，后续按产品替换。名额、价格及权益以项目组确认为准。</p>
-    </section>
-    <h2 class="renderings-heading">产品效果图图库</h2>
+
     <section class="filters sponsor-filters" aria-label="搜索与筛选">
       <label>搜索<input id="search" type="search" placeholder="例如行李牌、相册、吊旗" autocomplete="off"></label>
-      <label>归属人<select id="owner"><option value="">全部</option></select></label>
+      <label>推荐<select id="priority"><option value="">全部</option></select></label>
       <label>产品<select id="type"><option value="">全部</option></select></label>
       <button class="quiet" id="clear" type="button">清除筛选</button>
     </section>
+    <p class="inventory-note">选择1—2项赞助，联系项目组定制客户方案；名额及权益以项目组确认为准。</p>
     <p id="status" role="status" class="result-status" tabindex="-1">正在加载效果图…</p>
     <div id="cards" class="booth-grid"></div>
     <nav id="pagination" class="pagination" aria-label="赞助产品效果图分页" hidden></nav>
