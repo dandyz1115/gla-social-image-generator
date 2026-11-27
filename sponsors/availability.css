@@ -1,0 +1,21 @@
+
+.availability{padding:26px;margin-bottom:32px;border:1px solid var(--line);background:white;border-radius:10px}
+.availability-heading{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.availability-heading h2{font-size:26px;color:var(--blue)}.availability-heading p{margin-top:8px;font-size:16px;color:var(--muted)}
+.availability-heading>span{font-size:14px;color:var(--muted)}
+.availability-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:24px 0 14px}
+.availability-controls button{padding:10px 18px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--ink);font:inherit;cursor:pointer}
+.availability-controls button.active{background:var(--blue);color:white;border-color:var(--blue)}
+.availability-controls label{display:flex;align-items:center;gap:10px;margin-left:auto;font-size:14px}
+.availability-controls input{padding:10px;border:1px solid var(--line);border-radius:6px;font:inherit}
+#availability-status{color:var(--muted);font-size:14px;margin-bottom:14px}
+#availability-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.availability-item{border:1px solid var(--line);border-radius:6px;padding:18px;background:var(--paper)}
+.availability-item header{display:flex;align-items:start;justify-content:space-between;gap:12px}
+.availability-item h3{font-size:17px;line-height:1.5;margin:0}.availability-item .quantity{white-space:nowrap;font-size:16px;font-weight:700;color:var(--blue)}
+.availability-item p{margin-top:7px;font-size:14px;color:var(--muted)}
+.availability-item .recommended{color:var(--blue);font-size:14px;margin-top:10px}
+.availability-note{font-size:14px;color:var(--muted);margin-top:20px}
+.renderings-heading{font-size:24px;color:var(--blue);margin:28px 0 18px}
+@media(max-width:1000px){#availability-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.availability{padding:18px}.availability-controls label{margin-left:0;flex-basis:100%}.availability-controls input{min-width:0;flex:1}#availability-list{grid-template-columns:1fr}}

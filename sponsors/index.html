@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../booths/gallery.css?v=5">
   <script src="../booths/gallery.js?v=5" defer></script>
+  <link rel="stylesheet" href="./availability.css?v=1">
+  <script src="./availability.js?v=1" defer></script>
 </head>
 <body>
   <header class="masthead">
@@ -28,6 +30,18 @@
       <h1>赞助产品效果图</h1>
       <p>按产品、品牌或归属人查找，预览并下载原图。</p>
     </header>
+    <section class="availability" aria-labelledby="availability-title">
+      <div class="availability-heading"><div><h2 id="availability-title">深圳2027 · 可售赞助资源</h2><p>针对客户需求，选取1—2项赞助，联系项目组定制销售方案。</p></div><span>清单更新：2026-11-27</span></div>
+      <div class="availability-controls" role="group" aria-label="赞助清单筛选">
+        <button type="button" class="active" data-availability="recommended" aria-pressed="true">首推赞助</button>
+        <button type="button" data-availability="all" aria-pressed="false">全部待售</button>
+        <label>搜索赞助<input id="availability-search" type="search" placeholder="例如演讲、行李吊牌" autocomplete="off"></label>
+      </div>
+      <p id="availability-status" role="status">正在加载赞助清单…</p>
+      <div id="availability-list"></div>
+      <p class="availability-note">名额以项目组实时确认为准；价格、权益及独家合作条件请单独洽谈。</p>
+    </section>
+    <h2 class="renderings-heading">产品效果图图库</h2>
     <section class="filters sponsor-filters" aria-label="搜索与筛选">
       <label>搜索<input id="search" type="search" placeholder="例如行李牌、相册、吊旗" autocomplete="off"></label>
       <label>归属人<select id="owner"><option value="">全部</option></select></label>
