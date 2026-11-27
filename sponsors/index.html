@@ -8,8 +8,8 @@
   <link rel="icon" href="../assets/gla-blue.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../booths/gallery.css?v=5">
-  <script src="./gallery.js?v=5" defer></script>
-  <link rel="stylesheet" href="./cards.css?v=5">
+  <script src="./gallery.js?v=6" defer></script>
+  <link rel="stylesheet" href="./cards.css?v=6">
 </head>
 <body>
   <header class="masthead">
@@ -27,18 +27,15 @@
   <main class="booth-library">
     <header class="intro">
       <h1>赞助产品效果图</h1>
-      <p>新增31项可售赞助资源，其中17项首推，暂用统一样板逐项替换。原有效果图全部保留。</p>
-      <p><a href="./originals/3860878d1aab343b4fc9.png" target="_blank" rel="noopener">中文样板海报</a> · <a href="./originals/49d82623e8d2db80a095.png" target="_blank" rel="noopener">English poster</a></p>
+      <p>按产品、品牌或归属人查找，预览并下载原图。</p>
     </header>
-
-    <div class="language-options" role="group" aria-label="海报语言"><button type="button" data-lang="zh" aria-pressed="true">中文</button><button type="button" data-lang="en" aria-pressed="false">English</button></div>
+    <div class="language-options" role="group" aria-label="新增海报语言"><span>新增海报语言</span><button type="button" data-lang="zh" aria-pressed="true">中文</button><button type="button" data-lang="en" aria-pressed="false">English</button></div>
     <section class="filters sponsor-filters" aria-label="搜索与筛选">
       <label>搜索<input id="search" type="search" placeholder="例如行李牌、相册、吊旗" autocomplete="off"></label>
-      <label>推荐<select id="priority"><option value="">全部</option></select></label>
+      <label>归属人<select id="owner"><option value="">全部</option></select></label>
       <label>产品<select id="type"><option value="">全部</option></select></label>
       <button class="quiet" id="clear" type="button">清除筛选</button>
     </section>
-    <p class="inventory-note">选择1—2项赞助，联系项目组定制客户方案；名额及权益以项目组确认为准。</p>
     <p id="status" role="status" class="result-status" tabindex="-1">正在加载效果图…</p>
     <div id="cards" class="booth-grid"></div>
     <nav id="pagination" class="pagination" aria-label="赞助产品效果图分页" hidden></nav>

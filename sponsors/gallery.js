@@ -1,7 +1,7 @@
 "use strict";
 
 const search = document.querySelector("#search");
-const fields = ["priority", "type"].filter((field) => document.getElementById(field));
+const fields = ["owner", "type"].filter((field) => document.getElementById(field));
 const filters = Object.fromEntries(fields.map((field) => [field, document.getElementById(field)]));
 const cards = document.querySelector("#cards");
 const status = document.querySelector("#status");
@@ -105,10 +105,11 @@ function renderPage(page) {
     }
     const link = document.createElement("a");
     link.className = "download";
-    link.textContent = "下载中文";
+    link.textContent = baseEntry.originalEn ? "下载中文" : "下载原图";
     link.setAttribute("aria-label", "下载 " + entry.company + " " + describe(entry) + " 原图");
     downloadLink(link, entry);
     content.append(link);
+    if (baseEntry.originalEn) {
     const actions = document.createElement("div"); actions.className = "bilingual-actions";
     downloadLink(link, baseEntry); actions.append(link);
     if (baseEntry.originalEn) {
@@ -120,6 +121,7 @@ function renderPage(page) {
       actions.append(englishPreview, englishDownload);
     }
     content.append(actions);
+    }
     if (entry.recommended) {
       const badge = document.createElement("p"); badge.className = "priority-label"; badge.textContent = "首推赞助"; content.prepend(badge);
     }

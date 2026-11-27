@@ -68,7 +68,7 @@ def build(source):
         for item in inventory["items"]
     ]
 
-    entries.extend(legacy_entries)
+    entries = legacy_entries + entries
     (HERE / "catalog.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
